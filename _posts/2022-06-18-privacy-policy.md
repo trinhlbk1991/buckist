@@ -1,8 +1,4 @@
----
-title: Privacy Policy
-description: 
-image: https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2830&q=80
----
+# Privacy Policy
 
 _**Last update: 18 June 2022** This privacy policy has been compiled to better serve those who are concerned with how their personal information is being used online. Please read our privacy policy carefully to get a clear understanding of how Buckist ("Buckist," "we," "us," or "our") collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website and apps._
 
@@ -105,4 +101,4 @@ Or direct access in the app follow this guide: [https://icedtealabs.com/buckist/
 We will keep your personal information for our records if you create an account on our website or app unless and until you ask us to deactivate your account. Your account and Personal Information can be deleted at any time through your account settings.
 
 ## 6. Contact
-This Privacy Policy may be updated from time to time. Our use of your information will be governed by the most recent version of the policy, which can always be found at [https://icedtealabs.com/buckist/privacy/](https://icedtealabs.com/buckist/privacy/). Please contact us by email at trinhlbk1991@gmail.com if you have any issues about this Privacy Policy or the Service.
+This Privacy Policy may be updated from time to time. Our use of your information will be governed by the most recent version of the policy, which can always be found at [https://icedtealabs.com/buckist/buckist/2022/06/18/privacy-policy/](https://icedtealabs.com/buckist/buckist/2022/06/18/privacy-policy/). Please contact us by email at trinhlbk1991@gmail.com if you have any issues about this Privacy Policy or the Service.
