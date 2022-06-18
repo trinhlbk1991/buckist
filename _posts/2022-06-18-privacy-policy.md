@@ -1,5 +1,3 @@
-# Privacy Policy
-
 _**Last update: 18 June 2022** This privacy policy has been compiled to better serve those who are concerned with how their personal information is being used online. Please read our privacy policy carefully to get a clear understanding of how Buckist ("Buckist," "we," "us," or "our") collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website and apps._
 
 ## 1. Information to be collected
