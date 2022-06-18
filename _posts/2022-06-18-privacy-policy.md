@@ -69,6 +69,7 @@ We may use the information you provide when you register, join up for our newsle
 
 ## 3. Sharing Collected Information
 
+
 ### Third Party Disclosure
 
 We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties unless you have given us early notice. This excludes website hosting partners and other third parties who assist us in operating our website, doing our business, or providing services to you, as long as those parties agree to keep this information private. We may also release your information when we believe it is necessary to comply with the law, enforce our site policies, or defend our rights, property, or safety or the rights, property, or safety of others. Non-personally identifiable visitor information, on the other hand, may be shared with third parties for marketing, advertising, or other purposes. It's also worth noting that we don't allow third-party tracking of our users' activities.
@@ -101,4 +102,4 @@ Or direct access in the app follow this guide: [https://icedtealabs.com/buckist/
 We will keep your personal information for our records if you create an account on our website or app unless and until you ask us to deactivate your account. Your account and Personal Information can be deleted at any time through your account settings.
 
 ## 6. Contact
-This Privacy Policy may be updated from time to time. Our use of your information will be governed by the most recent version of the policy, which can always be found at [https://icedtealabs.com/buckist/buckist/2022/06/18/privacy-policy/](https://icedtealabs.com/buckist/buckist/2022/06/18/privacy-policy/). Please contact us by email at trinhlbk1991@gmail.com if you have any issues about this Privacy Policy or the Service.
+This Privacy Policy may be updated from time to time. Our use of your information will be governed by the most recent version of the policy, which can always be found at [https://icedtealabs.com/buckist/2022/06/18/privacy-policy/](https://icedtealabs.com/buckist/2022/06/18/privacy-policy/). Please contact us by email at trinhlbk1991@gmail.com if you have any issues about this Privacy Policy or the Service.
