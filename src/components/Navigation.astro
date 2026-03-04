@@ -1,0 +1,16 @@
+---
+import { navigation } from '../data/navigation';
+
+const currentPath = Astro.url.pathname;
+---
+<nav>
+  <a class="nav-toggle" id="open-nav" href="#">&#9776;</a>
+  {navigation.map((link) => {
+    const isActive = currentPath === link.link;
+    return (
+      <a href={link.link} class={isActive ? 'active' : ''}>
+        {link.name}
+      </a>
+    );
+  })}
+</nav>

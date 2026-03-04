@@ -1,0 +1,35 @@
+---
+interface Props {
+  label: string;
+  title: string;
+  description: string;
+  image1: string;
+  image2: string;
+  alt1: string;
+  alt2: string;
+  color: string;
+  reverse?: boolean;
+}
+
+const { label, title, description, image1, image2, alt1, alt2, color, reverse = false } = Astro.props;
+---
+<section class={`feature-section ${reverse ? 'feature-section--reverse' : ''}`}>
+  <div class="feature-section__inner">
+    <div class="feature-section__phones">
+      <div class="feature-section__phone">
+        <img src={image1} alt={alt1} width="460" height="590" loading="lazy">
+      </div>
+      <div class="feature-section__phone">
+        <img src={image2} alt={alt2} width="460" height="590" loading="lazy">
+      </div>
+    </div>
+    <div class="feature-section__content">
+      <p class="feature-section__label" style={`color: ${color}`}>{label}</p>
+      <h2 class="feature-section__title">{title}</h2>
+      <p class="feature-section__description">{description}</p>
+    </div>
+  </div>
+</section>
+<div class="gradient-strip" style={`background: var(--color-bg)`}>
+  <img src="/landing/gradient-strip.png" alt="" loading="lazy" width="2730" height="590">
+</div>

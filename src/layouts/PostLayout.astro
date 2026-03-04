@@ -1,0 +1,41 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  date?: Date;
+  categories?: string[];
+}
+
+const { title, description, image, date, categories } = Astro.props;
+---
+<BaseLayout title={title} description={description} image={image}>
+  <section class="hero" style={image ? `background-image: url(${image})` : ''}>
+    <div class="inner-hero text-container">
+      <h1>{title}</h1>
+      {description && <p class="subtext">{description}</p>}
+    </div>
+  </section>
+
+  <section>
+    <div class="blog-post text-container">
+      <div class="post-details">
+        {categories && categories.map((cat) => (
+          <span class="blog-filter">
+            <a href={`/category/${cat}/`}>{cat.charAt(0).toUpperCase() + cat.slice(1)}</a>
+          </span>
+        ))}
+        {date && (
+          <span class="post-date">
+            {date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </span>
+        )}
+      </div>
+      <div class="post-content">
+        <slot />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

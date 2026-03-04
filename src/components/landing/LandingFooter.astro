@@ -1,0 +1,20 @@
+---
+import { hero } from '../../data/landing';
+---
+<footer class="landing-footer">
+  <div class="landing-footer__logo">Buckist</div>
+
+  <div class="landing-footer__links">
+    <a href="/contact/" class="landing-footer__link">Contact</a>
+    <a href="/2022/06/18/privacy-policy/" class="landing-footer__link">Privacy Policy</a>
+    <a href="/2022/06/18/terms/" class="landing-footer__link">Terms</a>
+  </div>
+
+  <p class="landing-footer__copyright">&copy; {new Date().getFullYear()} Buckist</p>
+
+  <div style="margin-top: 16px;">
+    <a href={hero.ctaLink} class="landing-footer__link" target="_blank" rel="noopener noreferrer" style="font-size: 14px; color: var(--color-text-muted);">
+      Here to help. Questions, feedback or simply want to say hi? Drop me a line.
+    </a>
+  </div>
+</footer>

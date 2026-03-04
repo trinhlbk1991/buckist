@@ -1,0 +1,68 @@
+---
+import '../styles/legacy.css';
+import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
+const { title, description = 'Best bucket list app on Google Play', image } = Astro.props;
+const pageTitle = title === 'Home' ? 'Buckist' : `${title} | Buckist`;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{pageTitle}</title>
+    <meta name="description" content={description}>
+    {image && <meta property="og:image" content={image}>}
+    <meta property="og:title" content={pageTitle}>
+    <meta property="og:description" content={description}>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/images/logo/ic_bucket_small.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300|Rubik:300">
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+    <script>
+      (function () {
+        const header = document.getElementById("mainHeader");
+        if (!header) return;
+
+        function changeHeader() {
+          const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+          header.classList.toggle("header-background", scrollTop >= 50 || document.body.classList.contains("nav-open"));
+        }
+
+        let didScroll = false;
+        window.addEventListener("scroll", () => { didScroll = true; });
+
+        setInterval(() => {
+          if (didScroll) {
+            didScroll = false;
+            changeHeader();
+          }
+        }, 100);
+
+        changeHeader();
+
+        const openNav = document.getElementById("open-nav");
+        if (openNav) {
+          openNav.addEventListener("click", (event) => {
+            event.preventDefault();
+            document.body.classList.toggle("nav-open");
+            changeHeader();
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

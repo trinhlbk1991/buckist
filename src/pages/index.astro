@@ -1,0 +1,56 @@
+---
+import '../styles/global.css';
+import '../styles/landing.css';
+import LandingNav from '../components/landing/LandingNav.astro';
+import HeroSection from '../components/landing/HeroSection.astro';
+import TickerStrip from '../components/landing/TickerStrip.astro';
+import FeatureSection from '../components/landing/FeatureSection.astro';
+import TrustSection from '../components/landing/TrustSection.astro';
+import QuoteSection from '../components/landing/QuoteSection.astro';
+import LandingFooter from '../components/landing/LandingFooter.astro';
+import { features, tickerItems, tickerItems2, tickerItems3 } from '../data/landing';
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buckist - Your Personal Bucket List & Habit Tracker</title>
+    <meta name="description" content="Fast, simple, and private habit tracker on Google Play. Turn small tweaks into new-you peaks.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Buckist - Your Personal Bucket List & Habit Tracker">
+    <meta property="og:description" content="Fast, simple, and private habit tracker on Google Play.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Buckist - Your Personal Bucket List & Habit Tracker">
+    <meta name="twitter:description" content="Fast, simple, and private habit tracker on Google Play.">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/images/logo/ic_bucket_small.png">
+  </head>
+  <body style={`background: var(--color-bg); margin: 0; padding: 0;`}>
+    <LandingNav />
+    <HeroSection />
+
+    <TickerStrip items={tickerItems} direction="left" />
+    <TickerStrip items={tickerItems2} direction="right" />
+    <TickerStrip items={tickerItems3} direction="left" />
+
+    {features.map((feature, i) => (
+      <FeatureSection
+        label={feature.label}
+        title={feature.title}
+        description={feature.description}
+        image1={feature.image1}
+        image2={feature.image2}
+        alt1={feature.alt1}
+        alt2={feature.alt2}
+        color={feature.color}
+        reverse={i % 2 === 1}
+      />
+    ))}
+
+    <TrustSection />
+    <QuoteSection />
+    <LandingFooter />
+  </body>
+</html>

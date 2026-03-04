@@ -1,0 +1,21 @@
+---
+import { trustItems } from '../../data/landing';
+---
+<section class="trust-section">
+  <div class="trust-section__inner">
+    <div class="trust-section__header">
+      <h2 class="trust-section__title">A tracker you can trust and love<br>as your everyday companion.</h2>
+    </div>
+    <div class="trust-grid">
+      {trustItems.map((item) => (
+        <div class="trust-card">
+          <div class="trust-card__icon">
+            <img src={item.icon} alt={item.alt} width="48" height="48" loading="lazy">
+          </div>
+          <h3 class="trust-card__title">{item.title}</h3>
+          <p class="trust-card__description">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

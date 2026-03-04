@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { staffMembers } from '../data/staff';
+---
+<BaseLayout
+  title="About"
+  description="We've built an amazing team of developers, marketers, designers and sales people."
+>
+  <section class="hero" style="background-image: url(https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?fit=crop&w=2000&h=1322)">
+    <div class="inner-hero text-container">
+      <h1>Our Story</h1>
+      <p class="subtext">We have an extremely talented team whose sole goal is to bring you closer to the people around you.</p>
+    </div>
+  </section>
+
+  <section class="pad">
+    <div class="container">
+      <ul class="staff">
+        {staffMembers.map((person) => (
+          <li>
+            <div class="square-image" style={`background-image: url(${person.imagePath})`}></div>
+            <div class="name">{person.name}</div>
+            <div class="position">{person.position}</div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

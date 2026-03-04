@@ -1,0 +1,23 @@
+---
+import { tickerItems, tickerItems2, tickerItems3 } from '../../data/landing';
+
+interface Props {
+  items: typeof tickerItems;
+  direction?: 'left' | 'right';
+}
+
+const { items, direction = 'left' } = Astro.props;
+
+// Duplicate items for seamless loop
+const duplicatedItems = [...items, ...items];
+---
+<div class="ticker-strip">
+  <div class={`ticker-strip__track ticker-strip__track--${direction}`}>
+    {duplicatedItems.map((item) => (
+      <span class="ticker-item">
+        <span class={`ticker-item__dot ticker-item__dot--${item.color}`}></span>
+        {item.text}
+      </span>
+    ))}
+  </div>
+</div>

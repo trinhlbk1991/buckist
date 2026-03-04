@@ -1,3 +1,14 @@
-_site/*
+# Astro
+dist/
+.astro/
+node_modules/
+
+# OS
 .DS_Store
-.sass-cache/*
+
+# Legacy Jekyll
+_site/
+.sass-cache/
+
+# Debug
+firebase-debug.log

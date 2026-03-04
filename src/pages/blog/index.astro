@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0)
+);
+---
+<BaseLayout
+  title="Blog"
+  description="Keep up with the latest news."
+>
+  <section class="hero" style="background-image: url(https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?fit=crop&w=2000&h=1322)">
+    <div class="inner-hero text-container">
+      <h1>The latest news</h1>
+    </div>
+  </section>
+
+  <section>
+    <div class="text-container">
+      <ul class="blog-posts">
+        {posts.map((post) => (
+          <li class="blog-post">
+            <h2><a href={`/${post.data.slug}/`}>{post.data.title}</a></h2>
+            <div class="post-details">
+              {post.data.categories?.map((cat) => (
+                <span class="blog-filter">
+                  <a href={`/category/${cat}/`}>{cat.charAt(0).toUpperCase() + cat.slice(1)}</a>
+                </span>
+              ))}
+              {post.data.date && (
+                <span class="post-date">
+                  {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </span>
+              )}
+            </div>
+            <div class="post-content">
+              {post.data.description && <p>{post.data.description}</p>}
+              <div class="button"><a href={`/${post.data.slug}/`}>Read More</a></div>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

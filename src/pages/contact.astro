@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Contact"
+  description="Send us a message to find out more!"
+>
+  <section class="hero" style="background-image: url(https://images.unsplash.com/photo-1423666639041-f56000c27a9a?fit=crop&w=2000&h=1322)">
+    <div class="inner-hero text-container">
+      <h1>Get in touch today</h1>
+      <p class="subtext">If you have any questions or queries send us a message and we'll get back to you as soon as we can.</p>
+    </div>
+  </section>
+
+  <section class="pad">
+    <div class="container contact-box">
+      <form action="/contact-success/" method="post" class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name...">
+
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email..." required>
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message" placeholder="Enter your message..."></textarea>
+
+        <input type="submit" value="Send Message">
+      </form>
+
+      <div class="contact-details">
+        <h3>Email</h3>
+        <p><a href="mailto:trinhlbk1991@gmail.com">trinhlbk1991@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

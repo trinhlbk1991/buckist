@@ -1,0 +1,5 @@
+export const navigation = [
+  { name: 'Privacy Policy', link: '/2022/06/18/privacy-policy/' },
+  { name: 'Terms', link: '/2022/06/18/terms/' },
+  { name: 'Contact', link: '/contact/' },
+];
